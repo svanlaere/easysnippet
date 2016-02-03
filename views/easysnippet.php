@@ -17,25 +17,30 @@
 </div>
 <script type="text/javascript" charset="utf-8">
     jQuery(document).ready(function($) {
+
+        var target = this.hash;
         $("select[name='snippets'] option:lt(1)").attr("disabled", "disabled");
         $("#snippets").change(function() {
             var
                 start_tag = "[!";
-                end_tag = "!]";
-                snippet = $("#snippets option:selected").text();
-                php_start = "<?php";
-                include_start = "$this->includeSnippet('";
-                include_end = "');";
-                php_end = "?>";
-                space = " ";
-				
-            $('textarea').val(function(_, val) {
+            end_tag = "!]";
+            snippet = $("#snippets option:selected").text();
+            php_start = "<?php";
+            include_start = "$this->includeSnippet('";
+            include_end = "');";
+            php_end = "?>";
+            space = " ";
+            pagepart = $('.here')[1].hash;
+
+            $(pagepart).find('textarea').val(function(_, val) {
                 <?php if (Plugin::isEnabled('shortcut')) : ?>
                 return val + start_tag + snippet + end_tag + '\n';
                 <?php else: ?>
                 return val + php_start + space + include_start + snippet + include_end + space + php_end + '\n';
                 <?php endif; ?>
             });
+
+            //});
         });
     });
 </script>
