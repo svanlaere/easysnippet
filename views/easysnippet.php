@@ -2,9 +2,9 @@
 <div title="<?php echo __('Easysnippet'); ?>" id="div-image">
 <?php if ($snippets) : ?>    
 <p><?php echo __('Easysnippet info'); ?></p>
-<label for="snippets"><?php echo __('Snippets alphabetical'); ?></label><br />
+<label for="snippets"><?php echo __('Snippets alphabetically'); ?></label><br />
 <select name="snippets" id="snippets">
-<option value="0">Selecteer een snippet</option>
+<option value="0"><?php echo __('Select a snippet'); ?></option>
 <?php foreach($snippets as $key => $snippet) : ?>
 <optgroup label="<?php echo $key; ?>">
 <?php $for_limit = count($snippet); ?>
