@@ -12,5 +12,6 @@ return array(
     'Add a snippet the easy way' => 'Snippers op de makkelijke manier toevoegen',
 	'Snippets alphabetical' => 'Snippers alphabetisch',
 	'Easysnippet info' => 'Na het kiezen van een snipper word deze inclusief includeSnippet() in de actieve tab geplaatst.',
-        'There are no snippets found' => 'Er zijn geen snippers gevonden'
+        'There are no snippets found' => 'Er zijn geen snippers gevonden',
+        'Select a snippet' => 'Selecteer een snipper',
 );
