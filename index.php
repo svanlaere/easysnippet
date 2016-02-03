@@ -40,7 +40,12 @@ function page_snippetslist_tab($page)
 
 function grouped_snippets()
 {
-    $snippets = Snippet::findAll();
+    $snippets =Record::find(array(
+            'select' => "*",
+            'from' => "snippet",
+            'order' => "name ASC"
+        ));
+        
     if ($snippets) {
         foreach ($snippets as $key => $snippet) {
             $new_array                   = $snippet->name[0];
