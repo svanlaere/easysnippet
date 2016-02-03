@@ -1,5 +1,6 @@
 <div id="easysnippet" class="page" style="display: block;">
 <div title="<?php echo __('Easysnippet'); ?>" id="div-image">
+<?php if ($snippets) : ?>    
 <p><?php echo __('Easysnippet info'); ?></p>
 <label for="snippets"><?php echo __('Snippets alphabetical'); ?></label><br />
 <select name="snippets" id="snippets">
@@ -13,6 +14,9 @@
 </optgroup>
 <?php endforeach; ?>
 </select>
+<?php else: ?>
+<p><?php echo __('There are no snippets found'); ?></p>
+<?php endif; ?>
 </div>
 </div>
 <script type="text/javascript" charset="utf-8">
@@ -22,10 +26,11 @@
         $("select[name='snippets'] option:lt(1)").attr("disabled", "disabled");
         $("#snippets").change(function() {
             var
-                start_tag = "[!";
+            start_tag = "[!";
             end_tag = "!]";
             snippet = $("#snippets option:selected").text();
-            php_start = "<?php";
+            php_left = "<";
+            php_start = "?php";
             include_start = "$this->includeSnippet('";
             include_end = "');";
             php_end = "?>";
@@ -36,7 +41,7 @@
                 <?php if (Plugin::isEnabled('shortcut')) : ?>
                 return val + start_tag + snippet + end_tag + '\n';
                 <?php else: ?>
-                return val + php_start + space + include_start + snippet + include_end + space + php_end + '\n';
+                return val + php_left + php_start + space + include_start + snippet + include_end + space + php_end + '\n';
                 <?php endif; ?>
             });
 
