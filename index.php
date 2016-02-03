@@ -19,6 +19,7 @@ Plugin::setInfos(array(
     'author' => 'svanlaere',
     'version' => '0.1.0',
     'website' => 'http://svanlaere.nl/',
+    'update_url' => 'http://svanlaere.nl/plugin-versions.xml',
     'require_wolf_version' => '0.7.3',
     'type' => 'backend'
 ));
