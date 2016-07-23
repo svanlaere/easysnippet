@@ -24,15 +24,15 @@ $().ready(function() {
     var target = this.hash;
     $("select[name='snippets'] option:lt(1)").attr("disabled", "disabled");
     $("#snippets").change(function() {
-        var start_tag = "[!";
-        end_tag = "!]";
-        snippet = $("#snippets option:selected").text();
-        php_left = "<";
-        php_start = "?php";
-        include_start = "$this->includeSnippet('";
-        include_end = "');";
-        php_end = "?>";
-        space = " ";
+        var start_tag = "[!",
+        end_tag = "!]",
+        snippet = $("#snippets option:selected").text(),
+        php_left = "<",
+        php_start = "?php",
+        include_start = "$this->includeSnippet('",
+        include_end = "');",
+        php_end = "?>",
+        space = " ",
         pagepart = $('.here')[1].hash;
 
         $(pagepart).find('textarea').val(function(_, val) {
