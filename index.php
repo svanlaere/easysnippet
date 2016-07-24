@@ -17,10 +17,10 @@ Plugin::setInfos(array(
     'title' => __('Easysnippet'),
     'description' => __('Add a snippet the easy way'),
     'author' => 'svanlaere',
-    'version' => '0.2.0',
+    'version' => '0.1.0',
     'website' => 'http://svanlaere.nl/',
     'update_url' => 'http://svanlaere.nl/plugin-versions.xml',
-    'require_wolf_version' => '0.8.0',
+    'require_wolf_version' => '0.7.3',
     'type' => 'backend'
 ));
 
