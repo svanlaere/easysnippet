@@ -1,7 +1,6 @@
 <div id="easysnippet" class="page" style="display: block;">
 <div title="<?php echo __('Easysnippet'); ?>" id="div-image">
 <?php if ($snippets) : ?>    
-<p><?php echo __('Easysnippet info'); ?></p>
 <label for="snippets"><?php echo __('Snippets alphabetically'); ?></label><br />
 <select>
 <option value="0"><?php echo __('Select a snippet'); ?></option>
