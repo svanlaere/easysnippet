@@ -10,7 +10,11 @@ if (!defined('IN_CMS')) { exit(); }
 return array(
     'Easysnippet' => 'Easysnippet',
     'Add a snippet the easy way' => 'Add a snippet the easy way',
-	'Snippets alphabetically' => 'Snippets alphabetically',
-        'There are no snippets found' => 'There are no snippets found',
-        'Select a snippet' => 'Select a snippet',
+    'There are no snippets found' => 'No snippets were found',
+    'Select a snippet' => 'Choose a snippet',
+    'Easysnippet Appearance' => 'Easysnippet Appearance',
+    'Menu or buttons?' => 'Do you want a bunch of buttons or one menu?',
+    'Use' => 'Use',
+    'Long menu' => 'One long menu',
+    'Snippet buttons' => 'Many snippet-buttons',
 );

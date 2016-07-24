@@ -1,7 +1,6 @@
 <div id="easysnippet" class="page" style="display: block;">
 <div title="<?php echo __('Easysnippet'); ?>" id="div-image">
 <?php if ($snippets) : ?>    
-<label for="snippets"><?php echo __('Snippets alphabetically'); ?></label><br />
 <select>
 <option value="0"><?php echo __('Select a snippet'); ?></option>
 <?php foreach($snippets as $key => $snippet) : ?>
@@ -42,7 +41,7 @@ $().ready(function() {
             return val + php_left + php_start + space + include_start + snippet + include_end + space + php_end + '\n';
             <?php endif; ?>
         });
-      return false
+	return false
     };
 
     view.find("select option:lt(1)").attr("disabled", "disabled");
@@ -50,3 +49,5 @@ $().ready(function() {
     view.find("select").change(insert);
 });
 </script>
+
+

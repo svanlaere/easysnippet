@@ -24,6 +24,9 @@ Plugin::setInfos(array(
     'type' => 'backend'
 ));
 
+
+Plugin::addController('easysnippet', __('Easysnippet'), 'admin', false);
+
 Observer::observe('view_page_edit_tab_links', 'page_snippetslist_tab_link');
 Observer::observe('view_page_edit_tabs', 'page_snippetslist_tab');
 
@@ -34,7 +37,8 @@ function page_snippetslist_tab_link($page)
 
 function page_snippetslist_tab($page)
 {
-    echo new View(PLUGINS_ROOT . DS . 'easysnippet' . DS . 'views' . DS . 'easysnippet', array(
+    $view = Plugin::getSetting('ui', 'easysnippet');
+    echo new View(PLUGINS_ROOT . DS . 'easysnippet' . DS . 'views' . DS . $view, array(
         'snippets' => grouped_snippets()
     ));
 }
