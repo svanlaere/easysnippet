@@ -1,9 +1,8 @@
 <div id="easysnippet" class="page" style="display: block;">
 <div title="<?php echo __('Easysnippet'); ?>" id="div-image">
 <?php if ($snippets) : ?>    
-<p><?php echo __('Easysnippet info'); ?></p>
 <label for="snippets"><?php echo __('Snippets alphabetically'); ?></label><br />
-<select name="snippets" id="snippets">
+<select>
 <option value="0"><?php echo __('Select a snippet'); ?></option>
 <?php foreach($snippets as $key => $snippet) : ?>
 <optgroup label="<?php echo $key; ?>">
@@ -14,6 +13,7 @@
 </optgroup>
 <?php endforeach; ?>
 </select>
+<button>Add again</button>
 <?php else: ?>
 <p><?php echo __('There are no snippets found'); ?></p>
 <?php endif; ?>
@@ -22,11 +22,11 @@
 <script type="text/javascript" charset="utf-8">
 $().ready(function() {
     var target = this.hash;
-    $("select[name='snippets'] option:lt(1)").attr("disabled", "disabled");
-    $("#snippets").change(function() {
+    var view = $("#easysnippet");
+    var insert = function() {
         var start_tag = "[!",
         end_tag = "!]",
-        snippet = $("#snippets option:selected").text(),
+        snippet = view.find("option:selected").text(),
         php_left = "<",
         php_start = "?php",
         include_start = "$this->includeSnippet('",
@@ -42,6 +42,11 @@ $().ready(function() {
             return val + php_left + php_start + space + include_start + snippet + include_end + space + php_end + '\n';
             <?php endif; ?>
         });
-    });
+      return false
+    };
+
+    view.find("select option:lt(1)").attr("disabled", "disabled");
+    view.find("button").click(insert);
+    view.find("select").change(insert);
 });
 </script>
