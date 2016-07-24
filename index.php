@@ -38,7 +38,6 @@ function page_snippetslist_tab_link($page)
 function page_snippetslist_tab($page)
 {
     $view = Plugin::getSetting('ui', 'easysnippet');
-    file_put_contents('t.txt', serialize($view));
     echo new View(PLUGINS_ROOT . DS . 'easysnippet' . DS . 'views' . DS . $view, array(
         'snippets' => grouped_snippets()
     ));
