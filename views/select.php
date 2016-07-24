@@ -12,7 +12,7 @@
 </optgroup>
 <?php endforeach; ?>
 </select>
-<button>Add again</button>
+<button><?php echo __('Add again'); ?></button>
 <?php else: ?>
 <p><?php echo __('There are no snippets found'); ?></p>
 <?php endif; ?>
