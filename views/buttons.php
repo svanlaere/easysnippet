@@ -35,7 +35,7 @@ $().ready(function() {
             <?php else: ?>
             return val + php_left + php_start + space + include_start + snippet + include_end + space + php_end + '\n';
             <?php endif; ?>
-        });
+        }).change();
 	return false
     };
 
