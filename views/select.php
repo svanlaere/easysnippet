@@ -12,7 +12,7 @@
 </optgroup>
 <?php endforeach; ?>
 </select>
-<button><?php echo __('Add again'); ?></button>
+<button style='display:none'><?php echo __('Add again'); ?></button>
 <?php else: ?>
 <p><?php echo __('There are no snippets found'); ?></p>
 <?php endif; ?>
@@ -34,6 +34,7 @@ $().ready(function() {
         space = " ",
         pagepart = $('.here')[1].hash;
 
+        view.find("button").css({display:'inline-block'});
         $(pagepart).find('textarea').val(function(_, val) {
             <?php if (Plugin::isEnabled('shortcut')) : ?>
             return val + start_tag + snippet + end_tag + '\n';
