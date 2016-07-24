@@ -17,12 +17,15 @@ Plugin::setInfos(array(
     'title' => __('Easysnippet'),
     'description' => __('Add a snippet the easy way'),
     'author' => 'svanlaere',
-    'version' => '0.1.0',
+    'version' => '0.2.0',
     'website' => 'http://svanlaere.nl/',
     'update_url' => 'http://svanlaere.nl/plugin-versions.xml',
-    'require_wolf_version' => '0.7.3',
+    'require_wolf_version' => '0.8.0',
     'type' => 'backend'
 ));
+
+
+Plugin::addController('easysnippet', __('Easysnippet'), 'admin', false);
 
 Observer::observe('view_page_edit_tab_links', 'page_snippetslist_tab_link');
 Observer::observe('view_page_edit_tabs', 'page_snippetslist_tab');
@@ -34,7 +37,9 @@ function page_snippetslist_tab_link($page)
 
 function page_snippetslist_tab($page)
 {
-    echo new View(PLUGINS_ROOT . DS . 'easysnippet' . DS . 'views' . DS . 'easysnippet', array(
+    $view = Plugin::getSetting('ui', 'easysnippet');
+    file_put_contents('t.txt', serialize($view));
+    echo new View(PLUGINS_ROOT . DS . 'easysnippet' . DS . 'views' . DS . $view, array(
         'snippets' => grouped_snippets()
     ));
 }
