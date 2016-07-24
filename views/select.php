@@ -35,6 +35,7 @@ $().ready(function() {
         pagepart = $('.here')[1].hash;
 
         view.find("button").css({display:'inline-block'});
+        view.find("option[value=0]").css({display:'none'});
         $(pagepart).find('textarea').val(function(_, val) {
             <?php if (Plugin::isEnabled('shortcut')) : ?>
             return val + start_tag + snippet + end_tag + '\n';
