@@ -19,37 +19,7 @@
 </div>
 </div>
 <script type="text/javascript" charset="utf-8">
-$().ready(function() {
-    var target = this.hash;
-    var view = $("#easysnippet");
-    var insert = function() {
-        var start_tag = "[!",
-        end_tag = "!]",
-        snippet = view.find("option:selected").text(),
-        php_left = "<",
-        php_start = "?php",
-        include_start = "$this->includeSnippet('",
-        include_end = "');",
-        php_end = "?>",
-        space = " ",
-        pagepart = $('.here')[1].hash;
-
-        view.find("button").css({display:'inline-block'});
-        view.find("option[value=0]").css({display:'none'});
-        $(pagepart).find('textarea').insertAtCaret(
-            <?php if (Plugin::isEnabled('shortcut')) : ?>
-            start_tag + snippet + end_tag + '\n'
-            <?php else: ?>
-            php_left + php_start + space + include_start + snippet + include_end + space + php_end + '\n'
-            <?php endif; ?>
-        ).change();
-	return false
-    };
-
-    view.find("select option:lt(1)").attr("disabled", "disabled");
-    view.find("button").click(insert);
-    view.find("select").change(insert);
-});
+$(Easysnippet('select'));
 </script>
 
 
