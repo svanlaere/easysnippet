@@ -25,7 +25,7 @@ Plugin::setInfos(array(
 ));
 
 
-Plugin::addController('easysnippet', __('Easysnippet'), 'admin', false);
+Plugin::addController('easysnippet', __('Easysnippet'), 'administrator', false);
 
 Observer::observe('view_page_edit_tab_links', 'page_snippetslist_tab_link');
 Observer::observe('view_page_edit_tabs', 'page_snippetslist_tab');
