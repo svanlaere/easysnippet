@@ -29,13 +29,13 @@ $().ready(function() {
         space = " ",
         pagepart = $('.here')[1].hash;
 
-        $(pagepart).find('textarea').val(function(_, val) {
+        $(pagepart).find('textarea').insertAtCaret(
             <?php if (Plugin::isEnabled('shortcut')) : ?>
-            return val + start_tag + snippet + end_tag + '\n';
+            start_tag + snippet + end_tag + '\n'
             <?php else: ?>
-            return val + php_left + php_start + space + include_start + snippet + include_end + space + php_end + '\n';
+            php_left + php_start + space + include_start + snippet + include_end + space + php_end + '\n'
             <?php endif; ?>
-        }).change();
+        ).change();
 	return false
     };
 

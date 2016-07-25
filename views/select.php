@@ -36,13 +36,13 @@ $().ready(function() {
 
         view.find("button").css({display:'inline-block'});
         view.find("option[value=0]").css({display:'none'});
-        $(pagepart).find('textarea').val(function(_, val) {
+        $(pagepart).find('textarea').insertAtCaret(
             <?php if (Plugin::isEnabled('shortcut')) : ?>
-            return val + start_tag + snippet + end_tag + '\n';
+            start_tag + snippet + end_tag + '\n'
             <?php else: ?>
-            return val + php_left + php_start + space + include_start + snippet + include_end + space + php_end + '\n';
+            php_left + php_start + space + include_start + snippet + include_end + space + php_end + '\n'
             <?php endif; ?>
-        }).change();  // WHY: works without .change() in latest Chrome at least
+        ).change();
 	return false
     };
 
