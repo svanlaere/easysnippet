@@ -30,7 +30,7 @@ insertAtCaret: function(myValue){
 });
 
 
-Easysnippet= function init (uiVariant){
+Easysnippet= function init (uiVariant, customTag){
   return function (){
     var
       view = $("#easysnippet"),
@@ -53,10 +53,19 @@ Easysnippet= function init (uiVariant){
           view.find("option:lt(1)").css({display:'none'});
         }
 
-        $(pagepart).find('textarea').insertAtCaret(
-            php_left + php_start + space + include_start
-            + snippet + include_end + space + php_end + '\n'
-        ).change();
+        $(pagepart).find('textarea')
+          .insertAtCaret([
+
+            customTag ? customTag[0]
+            : (php_left + php_start + space + include_start),
+
+            snippet,
+
+            customTag ? customTag[1]
+            : (include_end + space + php_end),
+
+            '\n'
+          ].join('')).change();
         } catch (_) {;}  // if this fails the page gets saved
 
         return false

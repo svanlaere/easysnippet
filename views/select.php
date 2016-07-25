@@ -19,7 +19,9 @@
 </div>
 </div>
 <script type="text/javascript" charset="utf-8">
-$(Easysnippet('select'));
+$(Easysnippet('select', <?=Plugin::isEnabled('shortcut')
+                           ? '["[!", "!]"]'
+                           : 'null' ?>));
 </script>
 
 
