@@ -14,33 +14,9 @@
 </div>
 </div>
 <script type="text/javascript" charset="utf-8">
-$().ready(function() {
-    var target = this.hash;
-    var view = $("#easysnippet");
-    var insert = function(e) {
-        var start_tag = "[!",
-        end_tag = "!]",
-        snippet = e.target.textContent,
-        php_left = "<",
-        php_start = "?php",
-        include_start = "$this->includeSnippet('",
-        include_end = "');",
-        php_end = "?>",
-        space = " ",
-        pagepart = $('.here')[1].hash;
-
-        $(pagepart).find('textarea').insertAtCaret(
-            <?php if (Plugin::isEnabled('shortcut')) : ?>
-            start_tag + snippet + end_tag + '\n'
-            <?php else: ?>
-            php_left + php_start + space + include_start + snippet + include_end + space + php_end + '\n'
-            <?php endif; ?>
-        ).change();
-	return false
-    };
-
-    view.find("button").click(insert);
-});
+$(Easysnippet('buttons', <?=Plugin::isEnabled('shortcut')
+                           ? '["[!", "!]"]'
+                           : 'null' ?>));
 </script>
 
 

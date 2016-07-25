@@ -30,3 +30,53 @@ insertAtCaret: function(myValue){
 });
 
 
+Easysnippet= function init (uiVariant, customTag){
+  return function (){
+    var
+      view = $("#easysnippet"),
+      insert = function (e){
+
+        try {  // this code is fragile, touches the DOM and must return false
+        var snippet = 'select' == uiVariant
+                      ? view.find("option:selected").text()
+                      : e.target.textContent,
+        php_left = "<",
+        php_start = "?php",
+        include_start = "$this->includeSnippet('",
+        include_end = "');",
+        php_end = "?>",
+        space = " ",
+        pagepart = $('.here')[1].hash;
+
+        if ('select' == uiVariant){
+          view.find("button") .css({display:'inline-block'});
+          view.find("option:lt(1)").css({display:'none'});
+        }
+
+        $(pagepart).find('textarea')
+          .insertAtCaret([
+
+            customTag ? customTag[0]
+            : (php_left + php_start + space + include_start),
+
+            snippet,
+
+            customTag ? customTag[1]
+            : (include_end + space + php_end),
+
+            '\n'
+          ].join('')).change();
+        } catch (_) {;}  // if this fails the page gets saved
+
+        return false
+      };
+
+    view.find("button").click(insert);
+
+    if ('select' == uiVariant){
+      view.find("option:lt(1)").attr("disabled", "disabled");
+      view.find("select").change(insert);
+    }
+  }
+}
+
