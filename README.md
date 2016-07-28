@@ -3,11 +3,8 @@
 
 | Menu with Snippets | Button for every Snippet | Settings page |
 | --- | --- | --- |
-| ![](menu) | ![](buttons) | ![](settings) |
+| ![menu](https://cloud.githubusercontent.com/assets/132863/17196247/eca53c02-546b-11e6-9f43-797820f36652.png) | ![buttons](https://cloud.githubusercontent.com/assets/132863/17196259/f94170a2-546b-11e6-8873-9dbdbac8fd7e.png) | ![settings](https://cloud.githubusercontent.com/assets/132863/17196246/eca39a46-546b-11e6-899b-5fe07fb0d31a.png) |
 
-[menu](https://cloud.githubusercontent.com/assets/132863/17196247/eca53c02-546b-11e6-9f43-797820f36652.png)
-[buttons](https://cloud.githubusercontent.com/assets/132863/17196259/f94170a2-546b-11e6-8873-9dbdbac8fd7e.png)
-[settings](https://cloud.githubusercontent.com/assets/132863/17196246/eca39a46-546b-11e6-899b-5fe07fb0d31a.png)
 
 ## Easily insert any Snippet's code anywhere in your Page
 
