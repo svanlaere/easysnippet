@@ -18,6 +18,7 @@ When a menu option is selected or a button is clicked, the corresponding Snippet
 
 ## Download
 
+For WolfCMS v0.8.3 or above use GitHub's [Download ZIP](https://github.com/svanlaere/easysnippet/archive/master.zip) button.
 > TODO: link to two tagged releases, for 0.7.x and 0.8.x
 
 ## Installation
