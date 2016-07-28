@@ -18,7 +18,7 @@ Plugin::setInfos(array(
     'description' => __('Add a snippet the easy way'),
     'author' => 'svanlaere',
     'version' => '0.2.1',
-    'website' => 'http://svanlaere.nl/',
+    'website' => 'http://github.com/svanlaere/easysnippet/',
     'update_url' => 'http://svanlaere.nl/plugin-versions.xml',
     'require_wolf_version' => '0.8.3',
     'type' => 'backend'
