@@ -9,11 +9,13 @@
 ## Easily insert any Snippet's code anywhere in your Page
 
 Easysnippet displays the full list of all your Snippets in **a menu**, so that you can  
-use them quickly while editing a Page. An option to **display buttons** instead  
-(for when you don't have that many snippets) can be enabled in the Settings panel.
+use them quickly while editing a Page.
 
 When a menu option is selected or a button is clicked, the corresponding Snippet  
 **code is inserted** into your Page at the cursor.
+
+An option to **display buttons** instead (for when you don't have that many snippets)  
+can be enabled in the Settings panel.
 
 
 ## Download
