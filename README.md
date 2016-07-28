@@ -1,5 +1,5 @@
 # Easysnippet
-### a plugin for inserting Snippets into a Wolf CMS page
+### [a plugin](https://www.wolfcms.org/repository/202) for inserting Snippets into a [Wolf CMS](https://www.wolfcms.org) page
 
 | Menu with Snippets | Button for every Snippet | Settings page |
 | --- | --- | --- |
