@@ -32,5 +32,5 @@ is in `wolf/plugins/easysnippet/index.php` and enable the plugin in Administrati
 
 ## Bugs and Improvements
 
-See `CONTRIBUTING.md`
+Take a [look at](https://github.com/svanlaere/easysnippet/blob/master/CONTRIBUTING.md) `CONTRIBUTING.md`
 
