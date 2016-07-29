@@ -8,10 +8,8 @@
 
 if (!defined('IN_CMS')) { exit(); }
 
-$PDO = Record::getConnection();
-$driver = strtolower($PDO->getAttribute( Record::ATTR_DRIVER_NAME));
-
-$options = array('ui' =>'select');
-
-Plugin::setAllSettings($options, 'easysnippet');
+if (false === Plugin::getSetting('ui', 'easysnippet')) {
+  $options = array('ui' =>'select');
+  Plugin::setAllSettings($options, 'easysnippet');
+}
 

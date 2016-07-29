@@ -1,3 +1,18 @@
+body#body_page_add #easysnippet button + button[disabled],
 body#body_page_edit #easysnippet button + button[disabled] {
-  margin-left:.5em;
+  margin-left:1em;
+}
+
+body#body_page_add #easysnippet button[disabled],
+body#body_page_edit #easysnippet button[disabled] {
+  line-height:1.5;
+  background:white;
+  border:gray solid 1px;
+  border-radius:3px;
+}
+
+body#body_page_add #easysnippet #div-image,
+body#body_page_edit #easysnippet #div-image {
+  line-height:2.25;
+  margin:-.75em -.5em;
 }
