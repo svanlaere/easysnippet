@@ -21,7 +21,8 @@ can be enabled in the Settings panel.
 ## Download
 
 For WolfCMS v0.8.3 or above use GitHub's [Download ZIP](https://github.com/svanlaere/easysnippet/archive/master.zip) button.
-> TODO: link to two tagged releases, for 0.7.x and 0.8.x
+
+Last version compatible with lower versions of WolfCMS is at 7354993f.
 
 ## Installation
 
