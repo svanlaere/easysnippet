@@ -19,8 +19,7 @@ class EasysnippetController extends PluginController {
     }
 
     public function settings() {
-        $this->display('easysnippet/views/settings',
-                array('options' => Plugin::getAllSettings('easysnippet')));
+        $this->display('easysnippet/views/settings', Plugin::getAllSettings('easysnippet'));
     }
 
     function save() {

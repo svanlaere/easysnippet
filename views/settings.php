@@ -18,14 +18,13 @@ if (!defined('IN_CMS')) { exit(); }
             <td class="label"><label for="options[ui]"><?php echo __('Use'); ?>: </label></td>
             <td class="field">
 		<select name="options[ui]">
-		<option value="select" <?php if($options['ui'] == "select") echo 'selected ="";' ?>><?php echo __('Long menu'); ?></option>
-		<option value="buttons" <?php if($options['ui'] == "buttons") echo 'selected ="";' ?>><?php echo __('Snippet buttons'); ?></option>
+		<option value="select" <?php if($ui == "select") echo 'selected ="";' ?>><?php echo __('Long menu'); ?></option>
+		<option value="buttons" <?php if($ui == "buttons") echo 'selected ="";' ?>><?php echo __('Snippet buttons'); ?></option>
 		</select>
             </td>
             <td class="help"><?php echo __('Menu or buttons?'); ?></td>
             </tr>
         </table>
-    </fieldset>
     <br/>
     <p class="buttons">
         <input class="button" name="commit" type="submit" accesskey="s" value="<?php echo __('Save'); ?>" />
