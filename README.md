@@ -22,7 +22,7 @@ can be enabled in the Settings panel.
 
 For WolfCMS v0.8.3 or above use GitHub's [Download ZIP](https://github.com/svanlaere/easysnippet/archive/master.zip) button.
 
-Last version compatible with lower versions of WolfCMS is at 7354993f.
+Last version compatible with lower versions of WolfCMS is at [7354993f](https://github.com/svanlaere/easysnippet/archive/7354993ff75ea5580446f7550380bcb77f3a956d.zip).
 
 ## Installation
 
