@@ -25,7 +25,6 @@ if (!defined('IN_CMS')) { exit(); }
             <td class="help"><?php echo __('Menu or buttons?'); ?></td>
             </tr>
         </table>
-    </fieldset>
     <br/>
     <p class="buttons">
         <input class="button" name="commit" type="submit" accesskey="s" value="<?php echo __('Save'); ?>" />
