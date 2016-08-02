@@ -1,6 +1,8 @@
 # Easysnippet
 ### [a plugin](https://www.wolfcms.org/repository/202) for inserting Snippets into a [Wolf CMS](https://www.wolfcms.org) page
 
+**STATUS:** code and feature complete.
+
 | Menu with Snippets | Button for every Snippet | Settings page |
 | --- | --- | --- |
 | ![menu](https://cloud.githubusercontent.com/assets/132863/17196247/eca53c02-546b-11e6-9f43-797820f36652.png) | ![buttons](https://cloud.githubusercontent.com/assets/132863/17196259/f94170a2-546b-11e6-8873-9dbdbac8fd7e.png) | ![settings](https://cloud.githubusercontent.com/assets/132863/17196246/eca39a46-546b-11e6-899b-5fe07fb0d31a.png) |
@@ -34,4 +36,10 @@ is in `wolf/plugins/easysnippet/index.php` and enable the plugin in Administrati
 ## Bugs and Improvements
 
 Take a [look at](https://github.com/svanlaere/easysnippet/blob/master/CONTRIBUTING.md) `CONTRIBUTING.md`
+
+## License
+
+Code is under [MIT license](http://opensource.org/licenses/MIT), unless
+otherwise mentioned in the file.
+
 
